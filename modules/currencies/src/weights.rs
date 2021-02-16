@@ -44,10 +44,10 @@ impl<T: frame_system::Config> WeightInfo for AcalaWeight<T> {
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
 	fn transfer_native_currency() -> Weight {
-		(10_000_000 as Weight)
+		(11_000_000 as Weight)
 	}
 	fn update_balance_non_native_currency() -> Weight {
-		(26_000_000 as Weight)
+		(25_000_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -67,10 +67,10 @@ impl WeightInfo for () {
 			.saturating_add(RocksDbWeight::get().writes(4 as Weight))
 	}
 	fn transfer_native_currency() -> Weight {
-		(10_000_000 as Weight)
+		(11_000_000 as Weight)
 	}
 	fn update_balance_non_native_currency() -> Weight {
-		(26_000_000 as Weight)
+		(25_000_000 as Weight)
 			.saturating_add(RocksDbWeight::get().reads(3 as Weight))
 			.saturating_add(RocksDbWeight::get().writes(3 as Weight))
 	}
