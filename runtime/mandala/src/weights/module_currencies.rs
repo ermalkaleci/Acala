@@ -34,17 +34,17 @@ impl<T: frame_system::Config> module_currencies::WeightInfo for WeightInfo<T> {
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
 	fn transfer_native_currency() -> Weight {
-		(10_000_000 as Weight)
+		(11_000_000 as Weight)
 	}
 	fn update_balance_non_native_currency() -> Weight {
-		(29_000_000 as Weight)
+		(25_000_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
 	fn update_balance_native_currency_creating() -> Weight {
-		(15_000_000 as Weight)
+		(13_000_000 as Weight)
 	}
 	fn update_balance_native_currency_killing() -> Weight {
-		(15_000_000 as Weight)
+		(13_000_000 as Weight)
 	}
 }
